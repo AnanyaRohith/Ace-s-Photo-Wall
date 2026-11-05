@@ -10,9 +10,9 @@ It's a photo wall. It just has a few more tricks.
 
 ---
 
-## ✶ the wall
+## ☆ the wall
 
-![Ace's Photo Wall](main.png)
+![Ace's Photo Wall](main-wall.png)
 
 ## what can you do here?
 
@@ -86,10 +86,5 @@ Your wall is stored locally in your browser, so it isn't automatically synced ac
 
 ---
 
-## made with ✶
-
-A small experiment in making the web feel a little more tangible.
-
-Built by **Ananya Rohith**.
-
+## made with curiosity — AR✰
 [Open Ace's Photo Wall](https://ananyarohith.github.io/Ace-s-Photo-Wall/)
