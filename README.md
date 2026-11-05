@@ -1,4 +1,4 @@
-# Ace's photo wall ✶
+# Ace's photo wall ☆
 
 *A little corner of the internet for photos, polaroids, scribbles and things that deserve a spot on the wall.*
 
