@@ -1,4 +1,4 @@
-# ace's photo wall ✶
+# Ace's photo wall ✶
 
 *A little corner of the internet for photos, polaroids, scribbles and things that deserve a spot on the wall.*
 
@@ -12,7 +12,7 @@ It's a photo wall. It just has a few more tricks.
 
 ## ✶ the wall
 
-![Ace's Photo Wall](assets/photo-wall.png)
+![Ace's Photo Wall](main.png)
 
 ## what can you do here?
 
@@ -46,15 +46,15 @@ Change the heading, play around with typography, draw directly on the wall and r
 
 ### the dustbin
 
-![The Dustbin](assets/dustbin.png)
+![The Dustbin](dustbin.png)
 
 ### the keepsake jar
 
-![The Keepsake Jar](assets/keepsake-jar.png)
+![The Keepsake Jar](keepsake-jar.png)
 
 ### drawing mode
 
-![Drawing Mode](assets/drawing-mode.png)
+![Drawing Mode](drawing.png)
 
 ---
 
