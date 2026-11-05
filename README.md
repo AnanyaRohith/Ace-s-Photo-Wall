@@ -12,7 +12,7 @@ It's a photo wall. It just has a few more tricks.
 
 ## ☆ the wall
 
-![Ace's Photo Wall](main-wall.png)
+![Ace's Photo Wall](main.png)
 
 ## what can you do here?
 
