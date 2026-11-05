@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ace's Photo Wall</title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Bodoni+Moda:ital,wght@0,500;0,700;1,500&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<svg width="0" height="0" style="position:absolute"><defs><radialGradient id="cg" cx=".35" cy=".3"><stop offset="0" stop-color="#fffdf6" stop-opacity=".95"/><stop offset=".6" stop-color="#f3e6c8" stop-opacity=".55"/><stop offset="1" stop-color="#cdb587" stop-opacity=".78"/></radialGradient></defs></svg>
+<div id="flute"></div><div id="grain"></div>
+<div id="hd" contenteditable="true" spellcheck="false" data-ph="Click to add a heading"></div>
+<div id="items"></div>
+<canvas id="dc"></canvas>
+<div id="hint">Add a photo to start</div>
+
+<div id="pal"><div id="gp" title="Drag to move · drag to an edge to dock · double-click to fold"><i></i><i></i><i></i></div>
+ <div class="tools">
+  <label class="pb2" title="Add a photo"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M8.5 7l1.4-2.5h4.2L15.5 7"/><circle cx="12" cy="13.5" r="3.6"/></svg>Add<input id="file" type="file" accept="image/*" multiple hidden></label>
+  <button id="sz" class="pb2" title="Polaroid size"><svg id="szi" class="ic" viewBox="0 0 24 24"></svg><span id="szn">Tall</span></button>
+  <button id="nt" class="pb2" title="Add a note"><svg class="ic" viewBox="0 0 24 24"><path d="M6 4h9l4 4v12H6z"/><path d="M15 4v4h4"/><path d="M9 13h7M9 16.5h5"/></svg>Note</button>
+  <button id="mg" class="pb2" title="Add a magnet (double-click one to remove it)"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6 .7-4.5 4.1 1.3 6-5.4-3-5.4 3 1.3-6-4.5-4.1 6-.7z"/></svg>Magnet</button>
+  <button id="ht" class="pb2" title="Type a heading"><svg class="ic" viewBox="0 0 24 24"><path d="M5 6h14M12 6v13M9 19h6"/></svg>Title</button>
+  <div id="topt" hidden><button id="tf" title="Change font">Aa</button><input id="tw" type="range" min="60" max="240" title="Title size"></div>
+  <button id="dr" class="pb2" title="Draw"><svg class="ic" viewBox="0 0 24 24"><path d="M4 20l1-4L16.5 4.5a2 2 0 0 1 3 3L8 19z"/><path d="M14.5 6.5l3 3"/></svg>Draw</button>
+  <div id="dopt" hidden><input id="pc" type="color" title="Colour"><input id="pw" type="range" min="1" max="16" title="Brush size"><button id="du">Undo</button><button id="dx">Clear</button></div>
+  <hr>
+  <button id="oj" class="pb2" title="Glass jar"><svg class="ic" viewBox="0 0 24 24"><path d="M8 3.5h8v3H8z"/><path d="M7 6.5h10v13H7z"/><path d="M10 11v5"/></svg>Jar<i id="jc"></i></button>
+  <button id="ob" class="pb2" title="Dustbin"><svg class="ic" viewBox="0 0 24 24"><path d="M5 7h14"/><path d="M9 7V4.5h6V7"/><path d="M6.5 7l1 13h9l1-13"/><path d="M10 11v6M14 11v6"/></svg>Bin<i id="bc"></i></button>
+  <button id="pm" class="pb2" title="Photo mode"><svg class="ic" viewBox="0 0 24 24"><path d="M4 9V5h4M20 9V5h-4M4 15v4h4M20 15v4h-4"/><circle cx="12" cy="12" r="2.5"/></svg>Snap</button>
+ </div>
+ <button id="pt" title="Hide / show"><svg viewBox="0 0 10 10"><path d="M6.5 1.5L3 5l3.5 3.5"/></svg></button>
+</div>
+
+<div id="bin" title="Dustbin"><div id="bsvg"></div><div id="bcnt" class="badge"></div></div>
+<div id="jar"><div class="lid"></div><div class="glass"><div id="stk"></div></div><div id="cnt" class="badge"></div></div>
+<button id="px" class="bt">Exit photo mode</button>
+
+<div id="bp" hidden>
+ <b style="font-size:18px;color:#fff">Dustbin</b>
+ <div id="bg"></div>
+ <div class="row"><button id="be" class="bt">Empty dustbin</button><button id="bx" class="bt">Close</button></div>
+</div>
+
+<div id="jp" hidden>
+ <b style="font-size:18px;color:#fff">Keepsake jar</b>
+ <div id="jg"></div>
+ <button id="jx" class="bt">Close</button>
+</div>
+
+<div id="vw" hidden>
+ <div id="stage"><div id="card">
+  <div class="face front"></div>
+  <div class="face back"><textarea id="msg" placeholder="write something sweet…"></textarea>
+   <div class="sg"><span>sign here</span><button id="csg">clear</button></div><canvas id="sig"></canvas></div>
+ </div></div>
+ <div class="row"><button id="fl" class="bt">Flip</button><button id="rm" class="bt">Remove from wall</button><button id="dl" class="bt">Delete</button><button id="dn" class="bt">Done</button></div>
+</div>
+
+<div id="cf" hidden><div class="bx"><p id="cft"></p><div class="row"><button id="cfn" class="bt">Cancel</button><button id="cfy" class="bt warn">Delete</button></div></div></div>
+
+<script src="script.js"></script></body></html>
